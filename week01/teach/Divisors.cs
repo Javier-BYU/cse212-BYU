@@ -18,7 +18,17 @@ public static class Divisors {
     /// <returns>List of divisors</returns>
     private static List<int> FindDivisors(int number) {
         List<int> results = new();
-        // TODO problem 1
-        return results;
+    // Pieza 1: El bucle que recorre los números
+    for (int i = 1; i < number; i++)
+    {
+        // Pieza 2: El filtro que pregunta si divide exacto
+        if (number % i == 0)
+        {
+            // Pieza 3: Si es exacto, lo guardamos en la lista
+            results.Add(i);
+        }
     }
+
+    return results;
+}
 }
